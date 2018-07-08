@@ -4,8 +4,10 @@ require_once("config.php");
 
 $sql = new Sql();
 
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+$user = new Usuario();
 
-echo json_encode($usuarios);
+
+$user->loadById(5);
+echo $user;
 
 ?>
