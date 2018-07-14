@@ -38,9 +38,19 @@ $aluno->insert();
 echo $aluno;
 */
 
+/* alterar um usuario no db
 $usuario = new Usuario();
 $usuario->loadById(8);
 $usuario->update("professor","!@#$%");
+
+$lista = Usuario::getList();
+echo json_encode($lista);
+
+*/
+
+$usuario = new Usuario();
+$usuario->loadById(4);
+$usuario->delete();
 
 $lista = Usuario::getList();
 echo json_encode($lista);
