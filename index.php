@@ -25,11 +25,23 @@ $usuario->login("user","12345");
 
 echo $usuario; */
 
+/* ADICIONANDO USUARIOS PELO INSERT
 $aluno = new Usuario();
 $aluno->setDeslogin("aluno");
 $aluno->setDessenha("@lun0");
+$aluno->insert();
+echo $aluno; 
 
+-----
+$aluno = new Usuario("Ulisses","G@pC3a");
 $aluno->insert();
 echo $aluno;
+*/
 
+$usuario = new Usuario();
+$usuario->loadById(8);
+$usuario->update("professor","!@#$%");
+
+$lista = Usuario::getList();
+echo json_encode($lista);
 ?>
